@@ -1,0 +1,8 @@
+
+#container {
+    height: 100vh; /* stretches element height to full height of viewport */
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    
+
+}
