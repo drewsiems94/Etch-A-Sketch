@@ -3,12 +3,20 @@
 var gridWidth = '';
 var gridTotal = 0;
 
+
 const numSquares = document.getElementById('numSquares');
 numSquares.addEventListener('click', makeGrid);
 
 function makeGrid() {
 
+    const container = document.querySelector('#container');
+    removeAllChildNodes(container);
+
     gridWidth = parseInt(prompt("Enter the number of squares (1 to 100): "));
+    while (gridWidth < 1 || gridWidth > 100) {
+        gridWidth = parseInt(prompt("Enter a new number (1 to 100): "));
+    }
+    
     gridTotal = gridWidth * gridWidth;
 
     for (i = 0; i < gridTotal; i++) {
@@ -31,7 +39,8 @@ function makeGrid() {
     });
 }
 
-
-
-
-
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
