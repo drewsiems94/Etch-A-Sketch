@@ -1,8 +1,25 @@
 
-#container {
-    height: 100vh; /* stretches element height to full height of viewport */
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#container {
+    height: 500px; /* height: 100vh stretches element height to full height of viewport */
+    width: 500px;
+    border-width:10px;
+    border-style:solid;
+    border-color: violet;
+    display: grid;
+}
+
+button {
+    border-radius: 5px;
+    margin: 12px;
+    border-style: solid;
+    font-weight: bold;
+    background-color: violet;
+    font-size: 24px;
+    padding: 10px 30px;
 }
